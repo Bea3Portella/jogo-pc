@@ -1,0 +1,15 @@
+print('''Sou seu computador...
+Acabei de pensar em um número entre 0 e 10.
+Será que você consegue adivinhar qual foi?''')
+guess = int(input('Qual é seu palpite? '))
+from random import randint
+computer = randint(1, 10)
+count = 1
+while guess != computer:
+    count += 1
+    if guess < computer:
+        guess =int(input('Mais... Tente mais uma vez '))
+    else:
+        guess = int(input('Menos... Tente mais uma vez '))
+if guess == computer:
+    print('Acertou com {} tentativas. Parabéns!'.format(count))
